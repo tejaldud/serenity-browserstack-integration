@@ -269,7 +269,7 @@
             </properties>
         </profile>
         <profile>
-            <id>pixel</id>
+            <id>samsung</id>
             <build>
                 <plugins>
                     <plugin>
