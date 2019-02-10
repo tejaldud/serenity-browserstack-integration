@@ -104,7 +104,10 @@ public class LoginPage extends SerenityPage {
     }
 
     public void clickOnsignInButton() {
-        WaitForClickable(signInButton).click();
+        waitForElement(find(signInButton));
+        JavascriptExecutor jse = (JavascriptExecutor)getDriver();
+        jse.executeScript("arguments[0].click();", find(signInButton));
+//        WaitForClickable(signInButton).click();
     }
 
     public void verifyAccountName() {
