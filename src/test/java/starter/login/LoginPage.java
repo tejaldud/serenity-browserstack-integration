@@ -110,7 +110,7 @@ public class LoginPage extends SerenityPage {
     public void verifyAccountName() {
         try {
         assertThat(find(accountName).getText()).
-                withFailMessage("Unable to login").isEmpty();
+                withFailMessage("Unable to login").isNotEmpty();
         }
         catch (Exception e) {
            // StepEventBus.
