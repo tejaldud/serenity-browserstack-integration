@@ -22,7 +22,7 @@ public class LoginPage extends SerenityPage {
     }
     private By signInOption = By.cssSelector(".section-option__title");
     private By signInButton = By.xpath("//div[@id='authApp']//button[@class='button button--stretch auth-form__sign-in-btn']/span");
-    private By accountName = By.cssSelector(".nav__account-name");
+    private By accountName = By.xpath(".//span[@id='accountHeaderId']/span");
 
     @FindBy(xpath = "//div[@id='authApp']//a[@href='#/login']")
     private WebElement signInLink_Mobile;
