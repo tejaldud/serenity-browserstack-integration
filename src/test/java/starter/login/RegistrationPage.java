@@ -39,7 +39,7 @@ public class RegistrationPage extends PageObject {
         find(firstName).sendKeys(datatable.get("First Name"));
         find(lastName).sendKeys(datatable.get("Last Name"));
         String[] emails = datatable.get("Email").split("@");
-        String email=emails[0]+"@"+RandomStringUtils.randomAlphanumeric(3).toLowerCase()+emails[1];
+        String email=emails[0]+RandomStringUtils.randomAlphabetic(3).toLowerCase()+"@"+emails[1];
         find(emailAdd).sendKeys(email);
         find(password).sendKeys(datatable.get("Password"));
         find(confirmPassword).sendKeys(datatable.get("Confirm password"));
