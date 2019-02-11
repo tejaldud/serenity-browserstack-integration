@@ -2,7 +2,7 @@
 @version:Release-1
 @version:Sprint-1.2
 #@issue:ETSY-101
-Feature:User Registration
+Feature:Firefox User Registration
 
   @AccountCreation @uk @firefox
   Scenario Outline: As a new Customer I can Create an Account on Fitflop UK Site

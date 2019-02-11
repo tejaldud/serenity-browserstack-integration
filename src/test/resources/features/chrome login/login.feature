@@ -2,7 +2,7 @@
 @version:Release-1
 @version:Sprint-1.2
 #@issue:ETSY-101
-Feature: User Login
+Feature: Chrome User Login
 
 
   @issue:ETSY-101 @login @chrome
