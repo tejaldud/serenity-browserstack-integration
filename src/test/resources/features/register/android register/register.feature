@@ -2,7 +2,7 @@
 @version:Release-1
 @version:Sprint-1.2
 #@issue:ETSY-101
-Feature:User Registration
+Feature:Android User Registration
 
   @AccountCreation @uk @android
   Scenario Outline: As a new Customer I can Create an Account on Fitflop UK Site
