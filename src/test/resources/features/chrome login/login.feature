@@ -5,7 +5,7 @@
 Feature: User Login
 
 
-  @issue:ETSY-101 @login
+  @issue:ETSY-101 @login @chrome
   Scenario Outline: As a resgistered Fitflop customer I can login with valid users
     Given  I am on sign in page for country <country>
     And I enter <userName> and <password> after clicking signIn option
