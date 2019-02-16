@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://www.fitflop.com/uk/en/login/auth#/")
-public class HomePage extends SerenityPage {
+public class HomePage extends PageObject {
 
     @FindBy(css = "button[value='Search']")
     WebElementFacade searchButton;

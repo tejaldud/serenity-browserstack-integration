@@ -13,17 +13,16 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
 public class SerenityPage extends PageObject {
-	private WebDriver driver;
 	public SerenityPage()
 	{
 
 	}
-
 	protected static final Logger LOG = LoggerFactory.getLogger(SerenityPage.class);
-	public SerenityPage(WebDriver driver) {
-		super(driver);
-		this.driver = driver;
-	}
+
+//	public SerenityPage(WebDriver driver) {
+//		super(driver);
+//		//this.driver = driver;
+//	}
 	protected void sendTextToElement (WebElement element, String text) {
 		element(element).clear();
 		element(element).sendKeys(text);

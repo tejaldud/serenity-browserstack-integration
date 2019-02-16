@@ -1,5 +1,6 @@
 package starter.login;
 
+import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.steps.StepEventBus;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -9,17 +10,15 @@ import org.openqa.selenium.support.ui.Wait;
 import starter.DetailsDoesNotMatch;
 import starter.SerenityPage;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LoginPage extends SerenityPage {
+public class LoginPage extends PageObject {
     private WebDriver driverInstance;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-        driverInstance = driver;
-    }
     private By signInOption = By.cssSelector(".section-option__title");
     private By signInButton = By.xpath("//div[@id='authApp']//button[@class='button button--stretch auth-form__sign-in-btn']/span");
     private By accountName = By.xpath(".//span[@id='accountHeaderId']/span");
@@ -49,12 +48,19 @@ public class LoginPage extends SerenityPage {
     public void clickOnSignInLink() {
         signInLink_Mobile.click();
     }
+    protected void waitForElement (WebElement element) {
+        element(element).waitUntilVisible();
+    }
 
     public void clickOnCreateAccountLink() {
         waitForElement(createAccountLink);
         createAccountLink.click();
 
     }
+    protected void waitForElement (WebElement element, int second) {
+        element(element).withTimeoutOf(second, TimeUnit.SECONDS).waitUntilVisible();
+    }
+
     public void clickOnSignInOpt(){
         WaitForVisible(signInOption,30);
         WaitForClickable(signInOption).click();
