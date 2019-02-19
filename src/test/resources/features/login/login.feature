@@ -2,10 +2,10 @@
 @version:Release-1
 @version:Sprint-1.2
 #@issue:ETSY-101
-Feature: Chrome User Login
+Feature:User Login
 
 
-  @issue:ETSY-101 @login @chrome
+  @issue:ETSY-101 @login @android
   Scenario Outline: As a resgistered Fitflop customer I can login with valid users
     Given  I am on sign in page for country <country>
     And I enter <userName> and <password> after clicking signIn option
